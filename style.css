@@ -1,0 +1,142 @@
+:root{
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(205, 100%, 95%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'ubuntu';
+    letter-spacing: 1.2px;
+}
+
+.navigation{
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-repeat: repeat;
+    height: 565px;
+    width: 270px;
+    /* background-size: cover; */
+}
+.step {
+ display: none; 
+}
+.step.active {
+ display: block; 
+}
+.step-indicator { 
+    font-weight: bold;
+    color: var(--Magnolia);
+    border:1px solid var(--Magnolia);
+    cursor: pointer; 
+}
+.step-indicator.active { 
+    color: var(--Marine-blue);
+    background-color: var(--Light-blue);
+    border-color: var(--Light-blue);
+}
+.navigation .small {
+    color: var(--Light-gray);
+    /* font-size: 14px; */
+}
+.navigation .steptopic {
+    color: var(--Magnolia);
+    /* font-size: 14px; */
+}
+.btn-custom{
+    width: 24%;
+    background-color: var(--Marine-blue) ;
+    color: var(--Light-gray);
+}
+.doctor{
+    border-radius: 15px;
+}
+.custom-darkblue{
+    color: var(--Marine-blue);
+}
+.custom-gray{
+  color: var(--Cool-gray);
+}
+.custom-purpleBlue{
+    color: var(--Purplish-blue) ;
+}
+
+.form-control::placeholder{
+    color: var(--Cool-gray);
+    font-size: 16px;
+}
+
+.custom-input:focus {
+    --bs-focus-ring-color: transparent !important;
+   border-color: var(--Purplish-blue) ;
+   color: var(--Marine-blue);
+}
+.card img{
+    width: 30%;
+}
+form .card:hover{
+    border-color: var(--Purplish-blue) ;
+}
+
+.form-check {
+   accent-color: white;
+   /* background-color: var(--Marine-blue); */
+    
+}
+.custom-switch{
+    background-color:var(--Marine-blue) !important; 
+    border-color: var(--Marine-blue) !important;
+}
+.custom-switch:checked {
+    background-color: var(--Marine-blue)!important;
+    border-color: var(--Marine-blue) !important;
+
+}
+
+.subscriptionBox{
+    background-color: var(--Light-blue);
+    width: 100%;
+}
+#previousBtn{
+    color: var(--Cool-gray);
+    background-color: white;
+    border: 0;
+}
+#previousBtn:hover{
+    color: var(--Marine-blue);
+}
+
+.custom-checkbox{
+    width: 20px;
+    height: 20px;
+    border:1.5px solid var(--Cool-gray) !important;
+}
+.custom-checkbox:checked{
+    background-color:  var(--Purplish-blue) !important;
+    border-color: var(--Purplish-blue) !important ;
+}
+.custom-checkbox:focus{
+    border-color: var(--Purplish-blue) !important ;
+    box-shadow: 2px var(--Purplish-blue) !important ;
+}
+.Add-onsPrice{
+    color: var(--Purplish-blue);
+}
+.optionCard.selected{
+    background-color: var(--Light-blue);
+
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
