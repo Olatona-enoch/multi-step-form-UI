@@ -13,7 +13,7 @@
 }
 
 body{
-    background-color: var(--Light-blue);
+    background-color: var(--Magnolia);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,15 +89,15 @@ body{
 form .card:hover{
     border-color: var(--Purplish-blue) ;
 }
-
 .form-check {
-   accent-color: white;
-   /* background-color: var(--Marine-blue); */
-    
+   accent-color: white;    
 }
 .custom-switch{
     background-color:var(--Marine-blue) !important; 
     border-color: var(--Marine-blue) !important;
+    width: 50px !important;
+    height: 24px !important;
+    color: white !important;
 }
 .custom-switch:checked {
     background-color: var(--Marine-blue)!important;
@@ -136,7 +136,40 @@ form .card:hover{
 }
 .optionCard.selected{
     background-color: var(--Light-blue);
+    border: 2px solid var(--Purplish-blue);
 
+}
+.custom-card{
+    background-color: var(--Magnolia);
+    border: 0;
+}
+.custom-ul{
+    --bs-list-group-bg:var(--Magnolia);
+}
+.custom-small{
+    font-size: 16px;
+}
+
+#confirmationSlide p {
+    max-width: 450px; /* Adjust width as needed */
+}
+#changeLink {
+    font-size: 18px;
+}
+#changeLink:hover {
+    color: var(--Purplish-blue);
+    
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width:964px) {
+    .navigation{
+        display: flex;
+        background-image:url(assets/images/bg-sidebar-mobile.svg);
+        height: 100%;
+        width: 100%;
+    
+    }
+}

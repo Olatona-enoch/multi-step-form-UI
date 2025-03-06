@@ -21,7 +21,7 @@
     <div class="row  justify-content-center firstrow">
       <div class="col-auto">
        <div class="card p-4 doctor">
-        <div class="row  justify-content-start">
+        <div class="row d-flex justify-content-start">
           <div class="col-2 navigation rounded ms-2 pt-4 ps-4">
             <div class="d-flex align-items-start justify-content-start mb-4">
               <div class="step-indicator active me-4 border  rounded-circle px-3 py-2 " data-step="1">1</div>
@@ -57,271 +57,238 @@
             </div>
 
           </div>
-          <div class="col-auto mx-5 mt-5">
-                    <!-----------form-0ne --------->
-            <form class=" needs-validation " novalidate>
-              <div class="container justify-content-center step  " id="step-1" >
+          <div class="col-auto mx-5 mt-4 pt-2">
+            <form class="needs-validation container" novalidate>
+              <!-----------form-0ne --------->
+              <div class="container  justify-content-center step active " id="step-1">
 
                 <header>
-                  <h1 class="custom-darkblue">Personal info</h1>
-                  <p class="custom-gray">Please provide your name, email address, and phone number</p>
+                <h1 class="custom-darkblue">Personal info</h1>
+                <p class="custom-gray">Please provide your name, email address, and phone number</p>
                 </header>
                 <!-- Name -->
                 <div class="mb-3">
-                  <label for="name" class="form-label custom-darkblue">Name</label>
-                  <input type="text" id="name" class="form-control custom-input focus-ring custom-darkblue py-2 custom-focus" placeholder="e.g. Stephen King" required>
-                  <div class="invalid-feedback">
+                <label for="name" class="form-label custom-darkblue">Name</label>
+                <input type="text" id="name" class="form-control custom-input focus-ring custom-darkblue py-2 custom-focus" placeholder="e.g. Stephen King" required>
+                <div class="invalid-feedback">
                     This field is required.
-                  </div>
                 </div>
-      
+                </div>
+    
                 <!-- Email Address -->
                 <div class="mb-3">
                     <label for="email" class="form-label custom-darkblue">Email Address</label>
                     <input type="email" id="email" class="form-control custom-input focus-ring custom-darkblue py-2" placeholder="e.g. stephenking@lorem.com" required>
                     <div class="invalid-feedback">
-                      Please provide a valid email address.
+                    Please provide a valid email address.
                     </div>
                 </div>
-      
+    
                 <!-- Phone Number -->
                 <div class="mb-3">
                     <label for="phoneNumber" class="form-label custom-darkblue d-flex">Phone Number
-                      <div class="invalid-feedback">
+                    <div class="invalid-feedback">
                         This field is required
-                      </div>
+                    </div>
                     </label>
                     <input type="number" id="phoneNumber" class="form-control custom-input focus-ring custom-darkblue py-2 " placeholder="e.g. +1 234 567 890 " required>
                     <div class="invalid-feedback">
-                      This field is required
+                    This field is required
                     </div>
                 </div>
+
               </div>
 
               <!--------Form-Two-------->
-              <div class="container justify-content-center step " id="step-2"  >
+              <div class="container justify-content-center step " id="step-2" >
 
                 <header>
-                  <h1 class="custom-darkblue">Select your plan</h1>
-                  <p class="custom-gray pe-5 me-5">You have the option of monthly or yearly billing</p>
-                </header>
+                <h1 class="custom-darkblue">Select your plan</h1>
+                <p class="custom-gray pe-5 me-5">You have the option of monthly or yearly billing</p>
+                </header>    
 
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                  <div class="col-auto">
-                    <div class="card optionCard">
-                      <img src="assets/images/icon-arcade.svg" class="  m-3" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title custom-darkblue">Arcade</h5>
-                        <p class="card-text custom-gray">$9/mo</p>
-                      </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                <div class="col-auto">
+                    <div class="card optionCard selected">
+                    <img src="assets/images/icon-arcade.svg" class="  m-3" alt="...">
+                    <div class="card-body" id="arcadePackage">
+                        <h5 class="card-title custom-darkblue mb-0">Arcade</h5>
+                        <p class="card-text custom-gray mb-0">$9/mo</p>
+                        <!-- <span class="custom-darkblue small mt-0"> 2 months free</span> -->
                     </div>
-                  </div>
-                  <div class="col-auto">
-                    <div class="card optionCard">
-                      <img src="assets/images/icon-advanced.svg" class=" m-3  " alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title custom-darkblue">Advanced</h5>
-                        <p class="card-text custom-gray"> $12/mo</p>
-                      </div>
                     </div>
-                  </div>
-                  <div class="col-auto ">
+                </div>
+                <div class="col-auto">
                     <div class="card optionCard">
-                      <img src="assets/images/icon-pro.svg" class="m-3" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title custom-darkblue ">Pro</h5>
-                        <p class="card-text custom-gray"> $15/mo</p>
-                      </div>
+                    <img src="assets/images/icon-advanced.svg" class=" m-3  " alt="...">
+                    <div class="card-body" id="advancedPackage">
+                        <h5 class="card-title custom-darkblue mb-0">Advanced</h5>
+                        <p class="card-text custom-gray mb-0"> $12/mo</p>
                     </div>
-                  </div>
+                    </div>
+                </div>
+                <div class="col-auto ">
+                    <div class="card optionCard">
+                    <img src="assets/images/icon-pro.svg" class="m-3" alt="...">
+                    <div class="card-body" id="proPackage">
+                        <h5 class="card-title custom-darkblue mb-0">Pro</h5>
+                        <p class="card-text custom-gray mb-0"> $15/mo</p>
+                    </div>
+                    </div>
+                </div>
                 </div>
                 <div class="my-5 py-3 d-flex align-items-center justify-content-center subscriptionBox rounded">
-                  <p class="mb-1 mt-0 monthly">Monthly &nbsp;</p>
-                  <div class="form-check form-switch mx-2">
-                    <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                  </div>
-                  <p class="mb-1 mt-0 YearlyId">Yearly</p>
+                    <p class="mb-1 mt-0 monthly">Monthly</p>
+                    <div class="form-check form-switch mx-3">
+                        <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                    <p class="mb-1 mt-0 YearlyId">Yearly</p>
                 </div>
+                
               </div>
 
               <!--------Form-Three-------->
-              <div class="container justify-content-center step active " id="step-3">
+              <div class="container justify-content-center step " id="step-3" >
                 <header>
-                  <h1 class="custom-darkblue">Pick add-ons</h1>
-                  <p class="custom-gray pe-5 me-5">Add-ons help enhance your gaming experience</p>
+                <h1 class="custom-darkblue">Pick add-ons</h1>
+                <p class="custom-gray pe-5 me-5">Add-ons help enhance your gaming experience</p>
                 </header>
 
                 <div class="row row-cols-1 g-4">
-                  <div class="col">
-                    <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3 ">
-                      <div class="d-flex align-items-center">
-                        <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
-                        <div class="text-start">
-                          <p class="custom-darkblue mb-0">Online service</p>
-                          <p class="custom-gray mb-0">Access to multiplayer games</p>
-                        </div>  
-                      </div>
-                      <div class="Add-onsPrice">
-                        +$1/mo
-                      </div>
+                    <div class="col">
+                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3 ">
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <div class="text-start">
+                                    <p class="custom-darkblue mb-0 addOnName">Online service</p>
+                                    <p class="custom-gray mb-0">Access to multiplayer games</p>
+                                </div>  
+                            </div>
+                            <div class="Add-onsPrice" id="addOnlineService">
+                                +$1/mo
+                            </div>
+                        </div>
+                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <div class="text-start">
+                                    <p class="custom-darkblue mb-0 addOnName">Larger storage</p>
+                                    <p class="custom-gray mb-0">Extra 1TB of cloud save</p>
+                                </div>  
+                            </div>
+                            <div class="Add-onsPrice" id="addLargerStorage">
+                                +$2/mo
+                            </div>
+                        </div>
+                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between ">
+                            <div class="d-flex align-items-center">
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input" >
+                                <div class="text-start">
+                                    <p class="custom-darkblue mb-0 addOnName">Customizable Profile</p>
+                                    <p class="custom-gray mb-0 ">Custom theme on your profile</p>
+                                </div>  
+                            </div>
+                            <div class="Add-onsPrice" id="addCustomProfile">
+                                +$2/mo
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                              You must agree before submitting.
+                            </div>
+                        </div> -->
+        
                     </div>
-                    <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3">
-                      <div class="d-flex align-items-center">
-                        <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
-                        <div class="text-start">
-                          <p class="custom-darkblue mb-0">Larger storage</p>
-                          <p class="custom-gray mb-0">Extra 1TB of cloud save</p>
-                        </div>  
-                      </div>
-                      <div class="Add-onsPrice">
-                        +$2/mo
-                      </div>
-                    </div>
-                    <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between ">
-                      <div class="d-flex align-items-center">
-                        <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
-                        <div class="text-start">
-                          <p class="custom-darkblue mb-0">Customizable Profile</p>
-                          <p class="custom-gray mb-0 ">Custom theme on your profile</p>
-                        </div>  
-                      </div>
-                      <div class="Add-onsPrice">
-                        +$2/mo
-                      </div>
-                    </div>
-      
-                  </div>
                 </div>
-
-
-
+    
               </div>
 
+              <!--------Form-four-------->
+              <div class="container justify-content-center step " id="step-4">
+                <header>
+                <h1 class="custom-darkblue">Finishing up</h1>
+                <p class="custom-gray pe-5 me-5">Double-check everything looks OK before confirming</p>
+                </header>
 
-
-
-
+                <div class="card  custom-card" style="width:100%; ">
+                    <div class="card-body pb-0 ">
+                        <ul class="pt-2 px-3 custom-ul">
+                            <li class="list-group-item d-flex justify-content-between align-items-center pt-0 pb-2 " id="packageSummary">
+                                <div class=" d-flex flex-column  text-start"> 
+                                    <h1 class=" mb-0 fs-5 custom-darkblue">Arcade(Monthly)</h1> 
+                                    <a href="" class=" mt-1 custom-gray" id="changeLink">Change</a>
+                                </div>
+                                <div class="custom-darkblue fs-5 fw-bold" id="packagePrice">
+                                    $9/mo
+                                </div>
+                            </li>
+                            <hr>
+                            <li class="d-flex justify-content-between align-items-center  py-2">
+                                <div class="custom-gray custom-small">Online service</div>
+                                <div class="custom-darkblue custom-small">+$1/mo</div>
+                            </li>
+                            <li class=" d-flex justify-content-between align-items-center py-2">
+                                <div class="custom-gray custom-small">Larger storage</div>
+                                <div class="custom-darkblue custom-small">+$2/mo</div>
+                            </li>
+                        </ul>     
+                    </div>
+                    
+                </div>
+                <div class="d-flex justify-content-between align-items-center px-4 mx-2 py-4 ">
+                    <div class="custom-gray custom-small">
+                        Total <span id="totalperiod">(per month)</span>
+                    </div>
+                    <div id="totalprice" class=" custom-purpleBlue fs-4 fw-bold"> +$12/mo</div>
+                </div>
+    
+              </div>
+              <!---------Buttons section -->
               <div class="mt-5 mb-3 mx-2">
-                <div class=" py-3 d-flex align-items-center justify-content-between">
-                  <button class="btn  py-2" type="#" id="previousBtn" style="display: block;">Go back</button>
+                <div class=" py-3 d-flex align-items-center justify-content-end" id="button-grid">
+                  <button class="btn  py-2" type="#" id="previousBtn" style="display: none;">Go back</button>
                   <button class="btn btn-custom py-2 " type="submit" id="nextBtn">Next Step</button>
                 </div>
               </div>
-            </form>
-
-            
-
-
-
+              
+              <div class="container justify-content-center  align-items-center step text-center " id="confirmationSlide">
+                <img src="assets/images/icon-thank-you.svg" alt="" class="p-2" style="width: 25%;">
+                <h1 class="custom-darkblue fs-3 fw-bold py-2 ">Thank you!</h1>
+                <p class="small custom-gray">Thanks for confirming Your subscription! we hope you have
+                    fun using our platform. if you ever need support, please feel
+                    free to email us at support@loremgaming.com
+                </p>
     
-          </div>
+              </div>
+
+              <!---------STEP 5-->
+              <!-- <div class="spinner-border text-secondary" role="status"> </div>
+    
+              <div class="container justify-content-center step" id="confirmationSlide">
+                  <img src="assets/images/icon-thank-you.svg" alt="" class="" style="width: 10%;">
+                  <h1 class="custom-darkblue display-5 w-25">Thank You!</h1>
+                  <p class="small custom-gray w-25 ">Thanks for confirming Your subscription! we hope you
+                      fun using our platform. if you ever need support, please feel
+                      free to email us at support@loremgaming.com
+                  </p>
+              </div> -->
+              
+            
+            </form>
+           </div>
         </div>
        </div>
       </div>
     </div>
   </div>
 
-  <!-- Sidebar start
-
-  Step 1
-  Your info
-
-  Step 2
-  Select plan
-
-  Step 3
-  Add-ons
-
-  Step 4
-  Summary
-
-  Sidebar end
-
-  Step 1 start
-
-  Personal info
-  Please provide your name, email address, and phone number.
-
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
-
-  Step 1 end
-
-  Step 2 start
-
-  Select your plan
-  You have the option of monthly or yearly billing.
-
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
-
-  Monthly
-  Yearly
-
-  Go Back
-  Next Step
-
-  Step 2 end
-
-  Step 3 start
-
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
-
-  Online service
-  Access to multiplayer games
-  +$1/mo
-
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
-
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
-
-  Go Back
-  Next Step
-
-  Step 3 end
-
-  Step 4 start
-
-  Finishing up
-  Double-check everything looks OK before confirming.
-
-  Dynamically add subscription and add-on selections here
-
-  Total (per month/year)
-
-  Go Back
-  Confirm
-
-  Step 4 end
-
-  Step 5 start
-
-  Thank you!
-
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
-
-  Step 5 end -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
