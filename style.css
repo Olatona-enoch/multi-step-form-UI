@@ -19,13 +19,14 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'ubuntu';
-    letter-spacing: 1.2px;
+    /* letter-spacing: 1.2px; */
 }
 
 .navigation{
     background-image: url(assets/images/bg-sidebar-desktop.svg);
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 565px;
     width: 270px;
     /* background-size: cover; */
@@ -41,6 +42,7 @@ body{
     color: var(--Magnolia);
     border:1px solid var(--Magnolia);
     cursor: pointer; 
+    padding: 3px 10.5px;
 }
 .step-indicator.active { 
     color: var(--Marine-blue);
@@ -60,8 +62,10 @@ body{
     background-color: var(--Marine-blue) ;
     color: var(--Light-gray);
 }
-.doctor{
+.mainCard{
     border-radius: 15px;
+    padding: 0;
+    width: 100%;
 }
 .custom-darkblue{
     color: var(--Marine-blue);
@@ -83,7 +87,10 @@ body{
    border-color: var(--Purplish-blue) ;
    color: var(--Marine-blue);
 }
-.card img{
+/* .optionCard{
+    width: ;
+} */
+.optionCard img{
     width: 30%;
 }
 form .card:hover{
@@ -102,11 +109,13 @@ form .card:hover{
 .custom-switch:checked {
     background-color: var(--Marine-blue)!important;
     border-color: var(--Marine-blue) !important;
-
+}
+.input-group-text p:nth-last-child(1) br{
+   display: none;
 }
 
-.subscriptionBox{
-    background-color: var(--Light-blue);
+.periodicityBox{
+    background-color: var(--Magnolia);
     width: 100%;
 }
 #previousBtn{
@@ -117,7 +126,11 @@ form .card:hover{
 #previousBtn:hover{
     color: var(--Marine-blue);
 }
+.input-group-text.picked{
+    background-color: var(--Magnolia)!important ;
+    border-color: var(--Purplish-blue)!important ;
 
+}
 .custom-checkbox{
     width: 20px;
     height: 20px;
@@ -135,7 +148,7 @@ form .card:hover{
     color: var(--Purplish-blue);
 }
 .optionCard.selected{
-    background-color: var(--Light-blue);
+    background-color: var(--Magnolia);
     border: 2px solid var(--Purplish-blue);
 
 }
@@ -149,9 +162,12 @@ form .card:hover{
 .custom-small{
     font-size: 16px;
 }
-
+#confirmationSlide{
+    transition: ease-in-out all 3.s;
+}
 #confirmationSlide p {
     max-width: 450px; /* Adjust width as needed */
+    justify-self: center;
 }
 #changeLink {
     font-size: 18px;
@@ -164,12 +180,69 @@ form .card:hover{
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media screen and (max-width:964px) {
+@media screen and (max-width:992px) {
     .navigation{
         display: flex;
         background-image:url(assets/images/bg-sidebar-mobile.svg);
         height: 100%;
         width: 100%;
+        justify-content:  center;
     
     }
+    .step-identifier{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    body {
+        background: url(assets/images/bg-sidebar-mobile.svg),var(--Magnolia);
+        background-position: top,bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size:  contain, cover; 
+        padding: 15px 0px;
+        overflow-x: hidden;
+       
+    }
+    .mainCard{
+        background: transparent;
+    }
+    .navigation{
+        background-image:none;
+    }
+    .step{
+        background-color: var(--White);
+    }
+    .optionCard{
+        padding: 10px;
+    }
+    .optionCard img{
+        width: 18%;
+    }
+}
+@media screen and (max-width:500px) {
+    body{
+        -webkit-text-size-adjust: 75%;
+    }
+    .btn-custom{
+        width: 35%;
+    }
+    .button-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0px 20px;
+        margin: 0;
+        background: white; /* Match the form background */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+       
+    }
+   
+}
+@media screen and (max-width:330px) {
+    .input-group-text p:nth-last-child(1) br{
+        display: block;
+    }
+
 }

@@ -47,7 +47,6 @@ function nextStep() {
     } 
     if (currentStep === 4) {
         nextBtn.innerHTML = "Submit";
-        nextBtn.removeEventListener("click", showConfirmation);
         nextBtn.addEventListener("click", showConfirmation);
     }
 
@@ -67,9 +66,13 @@ function prevStep() {
 prevBtn.addEventListener("click", (event) => {
     event.preventDefault();
     prevStep();
+
 });
 
 function showStep() {
+    nextBtn.innerHTML = "Next Step";
+    nextBtn.removeEventListener("click", showConfirmation);
+
     steps.forEach((s, index) => {
         s.classList.toggle("active", index + 1=== currentStep);
     });
@@ -176,10 +179,25 @@ function getSelectedAddOns() {
         let addOnName = checkbox.parentElement.querySelector(".addOnName").textContent.trim();
         let addOnPrice = checkbox.parentElement.parentElement.querySelector(".Add-onsPrice").textContent.trim();
         selectedAddOns.push({ addOnName, addOnPrice });
+
     });
 
     return selectedAddOns;
 }
+
+const checkboxes = document.querySelectorAll(".custom-checkbox");
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", function () {
+       let inputGroupText = checkbox.parentElement.parentElement;
+
+        if (checkbox.checked) {
+            inputGroupText.classList.add("picked"); // Apply the custom class
+        } else {
+            inputGroupText.classList.remove("picked"); // Remove the custom class
+        }
+    });
+});
+
 
 function updateSummary() {
     let selectedPlan = getSelectedPlan();
@@ -224,36 +242,60 @@ function updateSummary() {
     }
 
 }
-function Confirm(params) {
-    
-}
 const changeLink = document.getElementById("changeLink");
 changeLink.addEventListener("click",function changePackage(event){
         currentStep =2;
         event.preventDefault();
         showStep();
-
     }
 )
 
 function showConfirmation(event) {
+    // const stepFour = document.getElementById("step-4");
+    // stepFour.innerHTML = `
+    // <div class="d-flex align-items-center justify-content-center">
+    //         <div class="spinner-grow text-primary" role="status">
+    //             <span class="visually-hidden">Loading...</span>
+    //         </div>
+    // </div>
+    // `;
+    // console.log('Timeout executed after 3 seconds');
     event.preventDefault();
+    if (currentStep = 5) {
+        // Hide all steps
+        steps.forEach(step => step.classList.remove("active"));
+        steps.forEach((s, index) => {
+            s.classList.toggle("active", index + 1=== currentStep);
+        });
 
-    // Hide all steps
-    steps.forEach(step => step.classList.remove("active"));
 
-    // Find and show the confirmation slide
-    const confirmationSlide = document.getElementById("confirmationSlide");
-    if (confirmationSlide) {
-        confirmationSlide.classList.add("active");
+        // Optionally, hide the navigation buttons
+        nextBtn.style.display = "none";
+        prevBtn.style.display = "none";
+        
+
+        // Find and show the confirmation slide
+        const confirmationSlide = document.getElementById("confirmationSlide");
+        const timeoutId = setTimeout(() => {
+            console.log('Timeout executed after 5 seconds');
+            if (confirmationSlide) {
+                confirmationSlide.classList.add("active");
+                confirmationSlide.innerHTML=`
+                <img src="assets/images/icon-thank-you.svg" alt="" class="p-2" style="width: 25%;">
+                    <h1 class="custom-darkblue fs-3 fw-bold py-2 ">Thank you!</h1>
+                    <p class="lead custom-gray">Thanks for confirming Your subscription! we hope you have
+                    fun using our platform. if you ever need support, please feel
+                    free to email us at support@loremgaming.com
+                </p>
+                `;
+            }
+    
+        }, 3000);
+
+
     }
-
-    // Optionally, hide the navigation buttons
-    nextBtn.style.display = "none";
-    prevBtn.style.display = "none";
+    
 }
-
-
 
 
 

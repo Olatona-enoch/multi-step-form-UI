@@ -16,32 +16,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container m-5 pb-5 ">
+  <div class="container m-sm-5 m-3 pb-5 ">
   
-    <div class="row  justify-content-center firstrow">
+    <div class="row justify-content-center ">
       <div class="col-auto">
-       <div class="card p-4 doctor">
-        <div class="row d-flex justify-content-start">
-          <div class="col-2 navigation rounded ms-2 pt-4 ps-4">
-            <div class="d-flex align-items-start justify-content-start mb-4">
-              <div class="step-indicator active me-4 border  rounded-circle px-3 py-2 " data-step="1">1</div>
-              <div>
+       <div class="card p-sm-4 mainCard border-0 ">
+        <div class="row d-flex justify-content-center border-0 firstrow">
+          <div class="col-2 navigation rounded ms-lg-2 pt-sm-4 pt-2 ps-4">
+            <div class="d-flex align-items-center justify-content-start mb-4">
+              <div class="step-indicator active me-4 border  rounded-circle" data-step="1">1</div>
+              <div class="step-identifier">
                 <p class="mb-0 small"> STEP 1</p>
                 <p class="mb-0 fw-medium steptopic"> YOUR INFO</p>
               </div>
             </div>
 
             <div class="d-flex align-items-center justify-content-start mb-4">
-              <div class="step-indicator  me-4 rounded-circle px-3 py-2 " data-step="2">2</div>
-              <div>
+              <div class="step-indicator  me-4 rounded-circle" data-step="2">2</div>
+              <div class="step-identifier">
                 <p class="mb-0 small"> STEP 2</p>
                 <p class="mb-0 fw-medium steptopic"> SELECT PLAN</p>
               </div>
             </div>
 
             <div class="d-flex align-items-center justify-content-start mb-4">
-              <div class="step-indicator  me-4 rounded-circle px-3 py-2 " data-step="3">3</div>
-              <div>
+              <div class="step-indicator  me-4 rounded-circle" data-step="3">3</div>
+              <div class="step-identifier">
                 <p class="mb-0 small"> STEP 3</p>
                 <p class="mb-0 fw-medium steptopic"> ADD-ONS</p>
               </div>
@@ -49,18 +49,18 @@
 
 
             <div class="d-flex align-items-center justify-content-start mb-4">
-              <div class="step-indicator  me-4 rounded-circle px-3 py-2 " data-step="4">4</div>
-              <div>
+              <div class="step-indicator  me-4 rounded-circle" data-step="4">4</div>
+              <div class="step-identifier">
                 <p class="mb-0 small fw-light stepnote"> STEP 4</p>
                 <p class="mb-0 fw-medium steptopic">SUMMARY</p>
               </div>
             </div>
 
           </div>
-          <div class="col-auto mx-5 mt-4 pt-2">
-            <form class="needs-validation container" novalidate>
+          <div class="col-12 col-lg-auto mx-xl-5 mt-sm-4 pt-2 p-0">
+            <form class="needs-validation container px-4" novalidate>
               <!-----------form-0ne --------->
-              <div class="container  justify-content-center step active " id="step-1">
+              <div class="container rounded p-sm-4 p-4  justify-content-center step active" id="step-1">
 
                 <header>
                 <h1 class="custom-darkblue">Personal info</h1>
@@ -100,44 +100,44 @@
               </div>
 
               <!--------Form-Two-------->
-              <div class="container justify-content-center step " id="step-2" >
+              <div class="container rounded p-4  justify-content-center step  " id="step-2" >
 
                 <header>
                 <h1 class="custom-darkblue">Select your plan</h1>
-                <p class="custom-gray pe-5 me-5">You have the option of monthly or yearly billing</p>
+                <p class="custom-gray pe-sm-5 me-sm-5">You have the option of monthly or yearly billing</p>
                 </header>    
 
-                <div class="row row-cols-1 row-cols-md-3 g-4 ">
-                <div class="col-auto">
-                    <div class="card optionCard selected">
-                    <img src="assets/images/icon-arcade.svg" class="  m-3" alt="...">
-                    <div class="card-body" id="arcadePackage">
-                        <h5 class="card-title custom-darkblue mb-0">Arcade</h5>
-                        <p class="card-text custom-gray mb-0">$9/mo</p>
-                        <!-- <span class="custom-darkblue small mt-0"> 2 months free</span> -->
-                    </div>
-                    </div>
+                <div class="row row-cols-md-1 g-4 ">
+                  <div class="col-md-4 col-12">
+                      <div class="card optionCard  d-flex flex-row align-items-start  d-sm-block  selected">
+                      <img src="assets/images/icon-arcade.svg" class="m-sm-3  my-3 ms-2" alt="...">
+                      <div class="card-body" id="arcadePackage">
+                          <h5 class="custom-darkblue custom-small mb-1">Arcade</h5>
+                          <p class="card-text custom-gray small mb-1">$9/mo</p>
+                          <!-- <span class="custom-darkblue small mt-0"> 2 months free</span> -->
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-12">
+                      <div class="card optionCard d-flex flex-row align-items-start  d-sm-block">
+                        <img src="assets/images/icon-advanced.svg" class="m-sm-3  my-3 ms-2" alt="...">
+                        <div class="card-body" id="advancedPackage">
+                            <h5 class="custom-darkblue custom-small mb-1">Advanced</h5>
+                            <p class="card-text custom-gray small mb-1"> $12/mo</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-12 ">
+                      <div class="card optionCard d-flex flex-row align-items-start  d-sm-block">
+                        <img src="assets/images/icon-pro.svg" class="m-sm-3  my-3 ms-2" alt="...">
+                        <div class="card-body" id="proPackage">
+                            <h5 class="custom-darkblue custom-small mb-1">Pro</h5>
+                            <p class="card-text custom-gray small mb-1"> $15/mo</p>
+                        </div>
+                      </div>
+                  </div>
                 </div>
-                <div class="col-auto">
-                    <div class="card optionCard">
-                    <img src="assets/images/icon-advanced.svg" class=" m-3  " alt="...">
-                    <div class="card-body" id="advancedPackage">
-                        <h5 class="card-title custom-darkblue mb-0">Advanced</h5>
-                        <p class="card-text custom-gray mb-0"> $12/mo</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-auto ">
-                    <div class="card optionCard">
-                    <img src="assets/images/icon-pro.svg" class="m-3" alt="...">
-                    <div class="card-body" id="proPackage">
-                        <h5 class="card-title custom-darkblue mb-0">Pro</h5>
-                        <p class="card-text custom-gray mb-0"> $15/mo</p>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div class="my-5 py-3 d-flex align-items-center justify-content-center subscriptionBox rounded">
+                <div class="my-5 py-3 d-flex align-items-center justify-content-center periodicityBox  rounded">
                     <p class="mb-1 mt-0 monthly">Monthly</p>
                     <div class="form-check form-switch mx-3">
                         <input class="form-check-input custom-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -148,44 +148,44 @@
               </div>
 
               <!--------Form-Three-------->
-              <div class="container justify-content-center step " id="step-3" >
+              <div class="container rounded  p-4 justify-content-center step  " id="step-3" >
                 <header>
                 <h1 class="custom-darkblue">Pick add-ons</h1>
-                <p class="custom-gray pe-5 me-5">Add-ons help enhance your gaming experience</p>
+                <p class="custom-gray pe-sm-5 me-sm-5">Add-ons help enhance your gaming experience</p>
                 </header>
 
                 <div class="row row-cols-1 g-4">
-                    <div class="col">
-                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3 ">
+                    <div class="col-12">
+                        <div class="input-group-text bg-white py-3 px-sm-4 px-3 d-flex align-items-center justify-content-between mb-3 ">
                             <div class="d-flex align-items-center">
-                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-sm-4 me-3" type="checkbox" value="" aria-label="Checkbox for following text input">
                                 <div class="text-start">
                                     <p class="custom-darkblue mb-0 addOnName">Online service</p>
-                                    <p class="custom-gray mb-0">Access to multiplayer games</p>
+                                    <p class="custom-gray mb-0 small">Access to multiplayer <br> games</p>
                                 </div>  
                             </div>
-                            <div class="Add-onsPrice" id="addOnlineService">
+                            <div class="Add-onsPrice " id="addOnlineService">
                                 +$1/mo
                             </div>
                         </div>
-                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between mb-3">
+                        <div class="input-group-text bg-white py-3 px-sm-4 px-3 d-flex align-items-center justify-content-between mb-3 ">
                             <div class="d-flex align-items-center">
-                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-sm-4 me-3" type="checkbox" value="" aria-label="Checkbox for following text input">
                                 <div class="text-start">
                                     <p class="custom-darkblue mb-0 addOnName">Larger storage</p>
-                                    <p class="custom-gray mb-0">Extra 1TB of cloud save</p>
+                                    <p class="custom-gray mb-0 small">Extra 1TB of cloud<br> save</p>
                                 </div>  
                             </div>
                             <div class="Add-onsPrice" id="addLargerStorage">
                                 +$2/mo
                             </div>
                         </div>
-                        <div class="input-group-text bg-white py-3 px-4 d-flex align-items-center justify-content-between ">
+                        <div class="input-group-text bg-white py-3 px-sm-4 px-3 d-flex align-items-center justify-content-between  ">
                             <div class="d-flex align-items-center">
-                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-4" type="checkbox" value="" aria-label="Checkbox for following text input" >
+                                <input class="form-check-input custom-checkbox  mt-0 ms-0 me-sm-4 me-3" type="checkbox" value="" aria-label="Checkbox for following text input" >
                                 <div class="text-start">
                                     <p class="custom-darkblue mb-0 addOnName">Customizable Profile</p>
-                                    <p class="custom-gray mb-0 ">Custom theme on your profile</p>
+                                    <p class="custom-gray mb-0 small ">Custom theme on <br> your profile</p>
                                 </div>  
                             </div>
                             <div class="Add-onsPrice" id="addCustomProfile">
@@ -211,15 +211,15 @@
               </div>
 
               <!--------Form-four-------->
-              <div class="container justify-content-center step " id="step-4">
+              <div class="container rounded p-4 justify-content-center step  " id="step-4">
                 <header>
-                <h1 class="custom-darkblue">Finishing up</h1>
-                <p class="custom-gray pe-5 me-5">Double-check everything looks OK before confirming</p>
+                <h1 class="custom-darkblue ">Finishing up</h1>
+                <p class="custom-gray pe-sm-5 me-sm-5">Double-check everything looks OK before confirming</p>
                 </header>
 
-                <div class="card  custom-card" style="width:100%; ">
+                <div class="card custom-card " style="width:100%; ">
                     <div class="card-body pb-0 ">
-                        <ul class="pt-2 px-3 custom-ul">
+                        <ul class="pt-2 px-sm-3 px-1 custom-ul">
                             <li class="list-group-item d-flex justify-content-between align-items-center pt-0 pb-2 " id="packageSummary">
                                 <div class=" d-flex flex-column  text-start"> 
                                     <h1 class=" mb-0 fs-5 custom-darkblue">Arcade(Monthly)</h1> 
@@ -242,7 +242,7 @@
                     </div>
                     
                 </div>
-                <div class="d-flex justify-content-between align-items-center px-4 mx-2 py-4 ">
+                <div class="d-flex justify-content-between align-items-center px-sm-4 mx-3 mx-sm-2 py-4 ">
                     <div class="custom-gray custom-small">
                         Total <span id="totalperiod">(per month)</span>
                     </div>
@@ -251,35 +251,36 @@
     
               </div>
               <!---------Buttons section -->
-              <div class="mt-5 mb-3 mx-2">
+              <div class="mt-5 mb-sm-3 mx-sm-3 button-wrapper">
                 <div class=" py-3 d-flex align-items-center justify-content-end" id="button-grid">
                   <button class="btn  py-2" type="#" id="previousBtn" style="display: none;">Go back</button>
                   <button class="btn btn-custom py-2 " type="submit" id="nextBtn">Next Step</button>
                 </div>
               </div>
-              
-              <div class="container justify-content-center  align-items-center step text-center " id="confirmationSlide">
-                <img src="assets/images/icon-thank-you.svg" alt="" class="p-2" style="width: 25%;">
-                <h1 class="custom-darkblue fs-3 fw-bold py-2 ">Thank you!</h1>
-                <p class="small custom-gray">Thanks for confirming Your subscription! we hope you have
-                    fun using our platform. if you ever need support, please feel
-                    free to email us at support@loremgaming.com
-                </p>
-    
-              </div>
 
-              <!---------STEP 5-->
-              <!-- <div class="spinner-border text-secondary" role="status"> </div>
-    
-              <div class="container justify-content-center step" id="confirmationSlide">
-                  <img src="assets/images/icon-thank-you.svg" alt="" class="" style="width: 10%;">
-                  <h1 class="custom-darkblue display-5 w-25">Thank You!</h1>
-                  <p class="small custom-gray w-25 ">Thanks for confirming Your subscription! we hope you
-                      fun using our platform. if you ever need support, please feel
-                      free to email us at support@loremgaming.com
-                  </p>
-              </div> -->
-              
+
+              <!---------STEP 5-------->
+              <div class="container rounded p-4 justify-content-center  align-items-center step text-center " id="confirmationSlide">
+                <div class="d-flex align-items-center justify-content-center">
+                  <div class="spinner-grow text-primary" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                  </div>
+               </div>
+          
+              </div>
+              <!-- <img src="assets/images/icon-thank-you.svg" alt="" class="p-2" style="width: 25%;">
+              <h1 class="custom-darkblue fs-3 fw-bold py-2 ">Thank you!</h1>
+              <p class="lead custom-gray">Thanks for confirming Your subscription! we hope you have
+              fun using our platform. if you ever need support, please feel
+              free to email us at support@loremgaming.com
+              </p> -->
+
+
+              <!-- <div class="d-flex align-items-center justify-content-center">
+                <div class="spinner-grow text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div> -->                  
             
             </form>
            </div>
@@ -289,11 +290,14 @@
     </div>
   </div>
 
+
+
+
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
